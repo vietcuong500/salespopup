@@ -140,34 +140,26 @@ export const Demo = (props: any) => {
   };
 
   return (
-    <DynamicContentComponent
-      type={elementTag}
-      styles={styles}
-      settings={settings?.settings}
-    />
+    <ResizableBox
+      width={width}
+      height={height}
+      left={left}
+      top={top}
+      rotationDeg={angle}
+      onDrag={onDragHandler}
+      onDragEnd={onDragEndHandler}
+      onResize={onResizeHandler}
+      onResizeEnd={onResizeEndHandler}
+      onRotate={onRotateHandler}
+      onRotateEnd={onRotateEndHandler}
+      onClick={onClick}
+      id={id}
+    >
+      <DynamicContentComponent
+        type={elementTag}
+        styles={styles}
+        settings={settings?.settings}
+      />
+    </ResizableBox>
   );
-
-  // return (
-  //   <ResizableBox
-  //     width={width}
-  //     height={height}
-  //     left={left}
-  //     top={top}
-  //     rotationDeg={angle}
-  //     onDrag={onDragHandler}
-  //     onDragEnd={onDragEndHandler}
-  //     onResize={onResizeHandler}
-  //     onResizeEnd={onResizeEndHandler}
-  //     onRotate={onRotateHandler}
-  //     onRotateEnd={onRotateEndHandler}
-  //     onClick={onClick}
-  //     id={id}
-  //   >
-  //     <DynamicContentComponent
-  //       type={elementTag}
-  //       styles={styles}
-  //       settings={settings?.settings}
-  //     />
-  //   </ResizableBox>
-  // );
 };

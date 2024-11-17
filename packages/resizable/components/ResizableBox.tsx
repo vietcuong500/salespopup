@@ -405,7 +405,7 @@ export const ResizableBox = (props: ResizableBoxProps) => {
       <div
         {...htmlProps}
         className={classnames(styles.mainContainer, htmlProps.className)}
-        //ref={resizableRef}
+        ref={resizableRef}
         style={{
           left,
           top,
