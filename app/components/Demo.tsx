@@ -7,7 +7,7 @@ import {
   OnRotateEndHandler,
   ResizableBox,
 } from "@/packages/resizable";
-import { useEffect, useState } from "react";
+import { CSSProperties, useEffect, useState } from "react";
 
 const DynamicContentComponent = ({
   type,
@@ -18,11 +18,18 @@ const DynamicContentComponent = ({
   styles: any;
   settings?: any;
 }) => {
+  const stylesSystem: CSSProperties = {
+    width: "100%",
+    height: "100%",
+    position: "absolute",
+    left: 0,
+    top: 0,
+  };
   switch (type) {
     case "Button":
       return (
         <button
-          className="w-full h-full bg-slate-200 text-black inline-flex"
+          className="bg-slate-200 text-black inline-flex"
           style={{
             alignItems: styles?.alignItems,
             justifyContent: styles?.justifyContent,
@@ -36,10 +43,48 @@ const DynamicContentComponent = ({
             fontWeight: styles?.fontWeight,
             borderRadius: styles?.borderRadius,
             opacity: Number(styles?.opacity) / 100,
+            ...stylesSystem,
           }}
         >
           {settings?.content}
         </button>
+      );
+    case "Text":
+      return (
+        <p
+          className=""
+          style={{
+            paddingLeft: styles?.paddingLeft,
+            paddingTop: styles?.paddingTop,
+            paddingRight: styles?.paddingRight,
+            paddingBlock: styles?.paddingBottom,
+            backgroundColor: styles?.backgroundColor,
+            color: styles?.color,
+            fontSize: styles?.fontSize,
+            fontWeight: styles?.fontWeight,
+            borderRadius: styles?.borderRadius,
+            opacity: Number(styles?.opacity) / 100,
+            textAlign: styles?.textAlign,
+            ...stylesSystem,
+          }}
+        >
+          {settings?.content}
+        </p>
+      );
+    case "TextInput":
+      return (
+        <input
+          placeholder={settings?.content ?? "Email"}
+          style={{
+            color: styles?.color,
+            fontSize: styles?.fontSize,
+            fontWeight: styles?.fontWeight,
+            borderRadius: styles?.borderRadius,
+            opacity: Number(styles?.opacity) / 100,
+            textAlign: styles?.textAlign,
+            ...stylesSystem,
+          }}
+        />
       );
     case "Image":
       return (
@@ -52,7 +97,7 @@ const DynamicContentComponent = ({
     case "Box":
       return (
         <div
-          className="w-full h-full bg-slate-200 text-black inline-flex"
+          className=" bg-slate-200 text-black inline-flex"
           style={{
             alignItems: styles?.alignItems,
             justifyContent: styles?.justifyContent,
@@ -66,6 +111,7 @@ const DynamicContentComponent = ({
             fontWeight: styles?.fontWeight,
             borderRadius: styles?.borderRadius,
             opacity: Number(styles?.opacity) / 100,
+            ...stylesSystem,
           }}
         ></div>
       );

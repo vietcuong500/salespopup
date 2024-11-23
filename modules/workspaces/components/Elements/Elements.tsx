@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 import { useLayersStore } from "@/modules/workspaces/stories/workspaces";
 
-const ELEMENTS = ["Button", "Box", "Image"];
+const ELEMENTS = ["Button", "Box", "Image", "Text", "TextInput"];
 
 export const Elements = () => {
   const addLayer = useLayersStore((state) => state.addLayer);

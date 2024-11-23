@@ -33,7 +33,7 @@ type Actions = {
   deleteLayer: (id: string) => void;
   duplicateLayer: (id: string) => void;
   setLayerCurrent: (id: string) => void;
-  updateLayers: (id: string, value: any, type: 'styles' | 'settings') => void;
+  updateLayers: (id: string, value: any, type?: 'styles' | 'settings') => void;
   updateLayerCurrent: (value: any) => void;
   toggleHiddenLayer: (id: string) => void;
 };

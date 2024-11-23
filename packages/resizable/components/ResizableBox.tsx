@@ -203,7 +203,7 @@ export const ResizableBox = (props: ResizableBoxProps) => {
     minWidth = 10,
     minHeight = 10,
     handlersOffset = 20,
-    handlersSpaceOut = 50,
+    handlersSpaceOut = 0,
     relativeHandlers = true,
     id,
     resizeHandlerStyles: handlerStyles = {},

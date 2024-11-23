@@ -74,10 +74,38 @@ export const Typography = (props: any) => {
       <div className="flex flex-col gap-1">
         <p className="text-xs font-medium text-neutral-600 uppercase">align</p>
         <div className="flex flex-row justify-around items-center w-full bg-neutral-100 h-8 rounded">
-          <AlignLeft className="w-5 h-5 text-neutral-400" />
-          <AlignCenter className="w-5 h-5 " />
-          <AlignRight className="w-5 h-5 text-neutral-400" />
-          <AlignJustify className="w-5 h-5 text-neutral-400" />
+          <AlignLeft
+            className="w-5 h-5 text-neutral-400"
+            onClick={() => {
+              updateLayers(settings?.id, {
+                textAlign: "left",
+              });
+            }}
+          />
+          <AlignCenter
+            className="w-5 h-5 "
+            onClick={() => {
+              updateLayers(settings?.id, {
+                textAlign: "center",
+              });
+            }}
+          />
+          <AlignRight
+            className="w-5 h-5 text-neutral-400"
+            onClick={() => {
+              updateLayers(settings?.id, {
+                textAlign: "right",
+              });
+            }}
+          />
+          <AlignJustify
+            className="w-5 h-5 text-neutral-400"
+            onClick={() => {
+              updateLayers(settings?.id, {
+                textAlign: "justify",
+              });
+            }}
+          />
         </div>
       </div>
       <div className="flex flex-col gap-1">
