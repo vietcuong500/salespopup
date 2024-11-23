@@ -16,6 +16,8 @@ type Layer = {
     paddingTop: number;
     paddingRight: number;
     paddingBottom: number;
+    backgroundColor: string;
+    color: string;
   };
   settings: {
     isHidden: boolean;

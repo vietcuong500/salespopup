@@ -108,13 +108,13 @@ export const Typography = (props: any) => {
           />
         </div>
       </div>
-      <div className="flex flex-col gap-1">
-        <p className="text-xs font-medium text-neutral-600 uppercase">color</p>
+      <div className="flex flex-row items-center">
+        <p className="text-xs font-medium text-neutral-600 uppercase w-2/5">color</p>
         <Popover>
-          <PopoverTrigger>
-            <div className="flex flex-row p-3 gap-2 items-center w-full bg-neutral-100 h-8 rounded">
+          <PopoverTrigger className="w-3/5" >
+            <div className="flex flex-row p-2 gap-2 items-center w-full bg-neutral-100 h-9 rounded">
               <div
-                className="w-5 h-5 rounded-md cursor-pointer"
+                className="w-6 h-6 rounded-md cursor-pointer"
                 style={{
                   background: styles?.color,
                 }}

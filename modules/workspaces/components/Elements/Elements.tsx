@@ -17,7 +17,7 @@ export const Elements = () => {
               id: uuidv4(),
               styles: {
                 width: 200,
-                height: 100,
+                height: 40,
                 top: 0,
                 left: 0,
                 alignItems: "center",
@@ -26,6 +26,8 @@ export const Elements = () => {
                 paddingTop: 0,
                 paddingRight: 0,
                 paddingBottom: 0,
+                backgroundColor: "#000000",
+                color: "#ffffff"
               },
               settings: {
                 isHidden: false,

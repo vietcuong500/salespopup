@@ -29,10 +29,8 @@ const DynamicContentComponent = ({
     case "Button":
       return (
         <button
-          className="bg-slate-200 text-black inline-flex"
+          className="bg-slate-200 text-black hover:bg-slate-400"
           style={{
-            alignItems: styles?.alignItems,
-            justifyContent: styles?.justifyContent,
             paddingLeft: styles?.paddingLeft,
             paddingTop: styles?.paddingTop,
             paddingRight: styles?.paddingRight,
@@ -43,6 +41,7 @@ const DynamicContentComponent = ({
             fontWeight: styles?.fontWeight,
             borderRadius: styles?.borderRadius,
             opacity: Number(styles?.opacity) / 100,
+            textAlign: styles?.textAlign,
             ...stylesSystem,
           }}
         >
@@ -57,7 +56,7 @@ const DynamicContentComponent = ({
             paddingLeft: styles?.paddingLeft,
             paddingTop: styles?.paddingTop,
             paddingRight: styles?.paddingRight,
-            paddingBlock: styles?.paddingBottom,
+            paddingBottom: styles?.paddingBottom,
             backgroundColor: styles?.backgroundColor,
             color: styles?.color,
             fontSize: styles?.fontSize,
@@ -76,12 +75,17 @@ const DynamicContentComponent = ({
         <input
           placeholder={settings?.content ?? "Email"}
           style={{
+            paddingLeft: styles?.paddingLeft,
+            paddingTop: styles?.paddingTop,
+            paddingRight: styles?.paddingRight,
+            paddingBottom: styles?.paddingBottom,
             color: styles?.color,
             fontSize: styles?.fontSize,
             fontWeight: styles?.fontWeight,
             borderRadius: styles?.borderRadius,
             opacity: Number(styles?.opacity) / 100,
             textAlign: styles?.textAlign,
+            outline: "black",
             ...stylesSystem,
           }}
         />
